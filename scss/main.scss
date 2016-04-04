@@ -1,0 +1,11 @@
+@import 'ed-grid';
+@import 'variables/colors';
+@import 'modules/menu';
+@import 'modules/footer';
+@import 'modules/section';
+
+body {
+	margin: 0;
+	padding: 0;
+	background: rgba($light-slate-gray,.3);
+}

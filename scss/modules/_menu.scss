@@ -1,0 +1,114 @@
+header {
+	background:
+	linear-gradient(
+		rgba(0,0,0,0.8),
+		rgba(0,0,0,0.8)
+	),
+	url('../img/background1.jpg');
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	& nav {
+		background: rgba($black,.7);
+		align-items: center;
+		align-content: center;
+		display: flex;
+		line-height: 3;
+		position: fixed;
+		top: 0;
+		text-transform: uppercase;
+		& a {
+			color: $white;
+			font-weight: bold;
+		}
+		.nav-brand {
+			text-transform: uppercase;
+			color: $teal;
+		}
+		.fa-home {
+			font-size: 1.5em;
+		}
+		ul a:hover {
+			color: rgba($teal,.6);
+			text-decoration: underline;
+		}
+	}
+	& .header-content {
+		margin: 0;
+		padding: 0;
+		color: $white;
+		text-align: center;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+		text-transform: uppercase;
+		& .header-title {
+			font-size: 2em;
+			color: rgba($yellow,.3);
+
+		}
+		& .header-subtitle {
+			font-size: 2em;
+		}
+	}
+}
+
+// small devices
+@include from-to(small,medium) {
+	.menu-icon {
+		justify-content: flex-end;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.menu-items {
+		border-top: 1px solid $white;
+		display: none;
+		& li {
+			text-align: center;
+		}
+	}
+}
+// large devices
+@include from(large) {
+	.menu-icon {
+		display: none;
+	}
+	.menu-items {
+		display: inline-block;
+		justify-content: flex-end !important;
+		display: flex;
+		& li {
+			padding: 0 2em;
+			display: inline-block;
+		}
+	}
+}
+@include from-to(medium,large) {
+	.menu-icon {
+		display: none;
+	}
+	.menu-items {
+		display: inline-block;
+		align-items: center;
+		align-content: center;
+		border-top: 1px solid $white;
+		border-top: 1px solid $white !important;
+		justify-content: center !important;
+		& li {
+			padding: 0 2em;
+			display: inline-block;
+		}
+	}
+	.menu-brand {
+		align-items: center;
+		align-content: center !important;
+		display: flex;
+		justify-content: center;
+	}
+}
+// header
+@include from(medium) {
+	.header-content{
+		font-size: 2em;
+	}
+}

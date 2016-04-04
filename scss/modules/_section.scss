@@ -1,0 +1,38 @@
+section {
+	text-align: center;
+	margin-bottom: 3em;
+	font-size: 2em;
+	& h2 {
+		text-transform: uppercase;
+		width: 100%;
+		color: $teal;
+		border-bottom: 1px solid rgb(202, 194, 194);
+	}
+	.service_title {
+		& i {
+			width: 100%;
+			display: block;
+		}
+		& span {
+			width: 100%;
+			display: block;
+		}
+	}
+	& .service-item:hover {
+		background: $teal;
+		color: $white;
+	}
+}
+.about {
+	//background: rgba($red,.6);
+}
+
+.services {
+	//background: rgba($blue, .5);
+}
+
+/*@include from(medium) {
+	section {
+		font-size: 2em;
+	}
+}*/
